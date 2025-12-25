@@ -121,6 +121,7 @@ header button:active {
 }
 
 .card button.danger {
+  margin-left: 10px;
   background: #ef4444;
   color: white;
 }

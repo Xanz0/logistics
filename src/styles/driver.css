@@ -79,6 +79,7 @@ header button:active {
 /* DRIVER BUTTONS */
 .card button {
   margin-top: 12px;
+  margin-left: 10px;
   width: 48%;
   padding: 10px 0;
   border-radius: 12px;
