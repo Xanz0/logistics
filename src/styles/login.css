@@ -1,203 +1,3 @@
-/* Fullscreen container
-.premium-login-container {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Inter", sans-serif;
-}
-
-.premium-login-container canvas {
-  position: absolute !important;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-.premium-card {
-  position: relative;
-  z-index: 2;
-  width: 350px;
-  padding: 40px 30px;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(16px);
-  border-radius: 20px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-  text-align: center;
-  color: #fff;
-  animation: fadeInUp 0.8s ease forwards;
-}
-
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.premium-form input,
-.premium-form select {
-  width: 100%;
-  padding: 14px 18px;
-  margin-top: 12px;
-  border-radius: 12px;
-  border: none;
-  outline: none;
-  background: rgba(255, 255, 255, 0.25);
-  color: #fff;
-  font-size: 0.95rem;
-  transition: background 0.3s ease;
-}
-
-.premium-form input:focus,
-.premium-form select:focus {
-  background: rgba(255, 255, 255, 0.35);
-}
-
-.premium-form button {
-  width: 100%;
-  margin-top: 18px;
-  padding: 14px;
-  border-radius: 12px;
-  border: none;
-  color: #fff;
-  font-size: 1.05rem;
-  font-weight: 600;
-  background: rgba(0, 120, 255, 0.85);
-  cursor: pointer;
-  transition: transform 0.25s ease, background 0.3s ease;
-}
-
-.premium-form button:hover {
-  transform: scale(1.05);
-  background: rgba(0, 150, 255, 0.95);
-} */
-
-
-
-/* Background canvas full page */
-/* .login-page {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.login-page canvas {
-  position: absolute !important;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-}
-
-.login-card {
-  position: relative;
-  z-index: 1;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(15px);
-  border-radius: 20px;
-  padding: 40px;
-  width: 450px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  text-align: center;
-  color: #fff;
-}
-
-.login-card h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-  color: #fff;
-}
-
-.inputs-inline {
-  display: flex;
-  gap: 15px;
-  margin-bottom: 15px;
-}
-
-.login-card input {
-  flex: 1;
-  padding: 12px 15px;
-  border-radius: 12px;
-  border: none;
-  outline: none;
-  font-size: 1rem;
-  background: rgba(255, 255, 255, 0.25);
-  color: #fff;
-  transition: all 0.3s ease;
-}
-
-.login-card input::placeholder {
-  color: #eee;
-}
-
-.login-card input:focus {
-  background: rgba(255, 255, 255, 0.35);
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
-}
-
-.login-card select {
-  width: 100%;
-  padding: 12px 15px;
-  border-radius: 12px;
-  border: none;
-  outline: none;
-  background: rgba(255, 255, 255, 0.25);
-  color: #fff;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-  margin-bottom: 15px;
-}
-
-.login-card select:focus {
-  background: rgba(255, 255, 255, 0.35);
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
-}
-
-.login-card button {
-  padding: 12px 20px;
-  border-radius: 12px;
-  border: none;
-  font-size: 1.1rem;
-  font-weight: 600;
-  cursor: pointer;
-  background: linear-gradient(135deg, #ff416c, #ff4b2b);
-  color: #fff;
-  transition: all 0.3s ease;
-}
-
-.login-card button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 15px rgba(255, 75, 43, 0.5);
-}
-
-.login-card button:active {
-  transform: translateY(1px);
-  box-shadow: 0 4px 10px rgba(255, 75, 43, 0.5);
-}
-
-@media (max-width: 500px) {
-  .login-card {
-    width: 90%;
-    padding: 30px;
-  }
-  .inputs-inline {
-    flex-direction: column;
-  }
-} */
-
 
 html, body {
   margin: 0;
@@ -233,7 +33,7 @@ html, body {
 
 /* CARD */
 .login-card {
-  width: 460px;
+  max-width: 350px;
   padding: 40px;
   border-radius: 24px;
   background: rgba(255, 255, 255, 0.15);
@@ -314,4 +114,44 @@ button:active {
     opacity: 1;
     transform: translateY(0);
   }
+}
+.row {
+  width: 100%;
+}
+
+.row input {
+  flex: 1;
+  min-width: 0; /* MUHIM: flex input qisqarib ketmasligi uchun */
+}
+@media (max-width: 600px) {
+  .login-card {
+    max-width: 280px;
+    margin: 0 50px;
+  }
+}
+@media (max-width: 378px) {
+  .login-card {
+    max-width: 220px;
+    margin: 0 100px;
+  }
+}
+input:focus,
+select:focus {
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
+}
+select {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* OPTION FIX */
+select option {
+  background: #1e1e1e; /* dark fallback */
+  color: #ffffff;
+}
+
+/* HOVER / SELECTED */
+select option:checked {
+  background: #ffffff;
+  color: #000;
 }
