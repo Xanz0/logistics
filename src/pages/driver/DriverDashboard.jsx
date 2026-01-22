@@ -18,7 +18,12 @@ export default function DriverDashboard() {
     const phone = prompt("Driver phone:");
     if (!name || !phone) return;
 
-    saveExtraData(id, { driverName: name, driverPhone: phone, delivered: false });
+    saveExtraData(id, {
+      driverName: name,
+      driverPhone: phone,
+      delivered: false,
+    });
+
     alert("Order accepted");
     setOrders([...orders]); // re-render
   };
@@ -32,9 +37,23 @@ export default function DriverDashboard() {
   const getStatusInfo = (id) => {
     const e = extra[id];
 
-    if (!e) return { text: "Yangi", cls: "new", showAccept: true, showFinish: false };
-    if (!e.delivered) return { text: "Jarayonda", cls: "progress", showAccept: false, showFinish: true };
-    return { text: "Yetkazildi", cls: "done", showAccept: false, showFinish: false };
+    if (!e)
+      return { text: "Yangi", cls: "new", showAccept: true, showFinish: false };
+
+    if (!e.delivered)
+      return {
+        text: "Jarayonda",
+        cls: "progress",
+        showAccept: false,
+        showFinish: true,
+      };
+
+    return {
+      text: "Yetkazildi",
+      cls: "done",
+      showAccept: false,
+      showFinish: false,
+    };
   };
 
   return (
@@ -54,8 +73,17 @@ export default function DriverDashboard() {
           return (
             <div key={o.id} className={`card ${st.cls}`}>
               <h3>{o.name}</h3>
-              <p>{o.from} → {o.to}</p>
+
+              <p>
+                {o.from} → {o.to}
+              </p>
+
               <p>Kg: {o.height}</p>
+
+              {/* PRICE */}
+              <p className="price">
+                💵 {Number(o.price).toFixed(2)} $
+              </p>
 
               {e && (
                 <p className="driver">
@@ -65,8 +93,15 @@ export default function DriverDashboard() {
 
               <span className="status">{st.text}</span>
 
-              {st.showAccept && <button onClick={() => accept(o.id)}>Qabul Qilish</button>}
-              {st.showFinish && <button className="done" onClick={() => finish(o.id)}>Ishni Yakunlash</button>}
+              {st.showAccept && (
+                <button onClick={() => accept(o.id)}>Qabul Qilish</button>
+              )}
+
+              {st.showFinish && (
+                <button className="done" onClick={() => finish(o.id)}>
+                  Ishni Yakunlash
+                </button>
+              )}
             </div>
           );
         })}
@@ -74,3 +109,4 @@ export default function DriverDashboard() {
     </div>
   );
 }
+

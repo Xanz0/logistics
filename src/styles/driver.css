@@ -115,3 +115,8 @@ header button:active {
 .card button.done:active {
   transform: translateY(1px);
 }
+.price {
+  margin-top: 6px;
+  font-weight: 600;
+  color: #27ae60;
+}
