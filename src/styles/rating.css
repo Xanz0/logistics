@@ -1,0 +1,140 @@
+.rating-modal {
+  background: white;
+  padding: 35px;
+  border-radius: 20px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.rating-modal h2 {
+  margin: 0 0 20px 0;
+  color: #1f2937;
+  font-size: 24px;
+  text-align: center;
+}
+
+.driver-info {
+  text-align: center;
+  font-size: 16px;
+  margin: 10px 0;
+  color: #4b5563;
+}
+
+.driver-info strong {
+  color: #1f2937;
+}
+
+.order-info {
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+.rating-stars {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 25px 0;
+}
+
+.star {
+  background: none;
+  border: none;
+  font-size: 48px;
+  color: #d1d5db;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.star:hover {
+  transform: scale(1.2);
+}
+
+.star.active {
+  color: #fbbf24;
+  transform: scale(1.1);
+}
+
+.rating-labels {
+  text-align: center;
+  min-height: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 20px;
+}
+
+.rating-modal textarea {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 15px;
+  font-family: inherit;
+  resize: vertical;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.rating-modal textarea:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.rating-modal .modal-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.rating-modal .cancel-btn {
+  flex: 1;
+  padding: 14px;
+  background: #e5e7eb;
+  color: #1f2937;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.rating-modal .cancel-btn:hover {
+  background: #d1d5db;
+}
+
+.rating-modal .submit-btn {
+  flex: 1;
+  padding: 14px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.rating-modal .submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.rating-modal .submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 640px) {
+  .rating-modal {
+    padding: 25px;
+  }
+  
+  .star {
+    font-size: 36px;
+  }
+}

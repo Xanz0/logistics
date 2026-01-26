@@ -1,0 +1,142 @@
+.price-calculator {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  padding: 25px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.price-calculator h3 {
+  margin: 0 0 10px 0;
+  font-size: 22px;
+}
+
+.calculator-desc {
+  margin: 0 0 20px 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.calculator-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.calculator-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.calculator-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.calculator-form label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.calculator-form select,
+.calculator-form input {
+  padding: 12px 15px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.25);
+  color: white;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.calculator-form select option {
+  background: #1e1e1e;
+  color: white;
+}
+
+.calculator-form input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.calculator-form select:focus,
+.calculator-form input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.calculate-btn {
+  padding: 14px;
+  background: linear-gradient(135deg, #4ade80, #22c55e);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 5px;
+}
+
+.calculate-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(74, 222, 128, 0.4);
+}
+
+.price-result {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.result-item:last-child {
+  border-bottom: none;
+}
+
+.result-item span {
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+.result-item strong {
+  font-size: 16px;
+}
+
+.result-item.total {
+  margin-top: 10px;
+  padding-top: 15px;
+  border-top: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.result-item.total strong {
+  font-size: 24px;
+  color: #4ade80;
+}
+
+.price-breakdown {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+.price-breakdown small {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+@media (max-width: 640px) {
+  .calculator-form .form-row {
+    grid-template-columns: 1fr;
+  }
+}
