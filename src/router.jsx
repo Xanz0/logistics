@@ -5,6 +5,7 @@ import Register from './pages/auth/Register';
 import RoleSelect from './pages/auth/RoleSelect';
 import CustomerDashboard from './pages/customer/CustomerDashboard';
 import DriverDashboard from './pages/driver/DriverDashboard';
+import AdminDashboard from './pages/admin/AdminDashboard';
 import { isAuthenticated, getUserRole } from './utils/auth';
 
 const ProtectedRoute = ({ children, role }) => {
@@ -29,6 +30,7 @@ export default function RouterComponent() {
             <DriverDashboard />
           </ProtectedRoute>
         } />
+        <Route path="/admin" element={<AdminDashboard />} />
         <Route path="*" element={<Navigate to="/login" />} />
       </Routes>
   );

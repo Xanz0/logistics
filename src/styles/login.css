@@ -193,6 +193,7 @@ select option:checked {
   transition: all 0.3s ease;
 }
 
+
 .role-tab-btn.active {
   background: rgba(255, 255, 255, 0.3);
   border: 2px solid white;
@@ -232,4 +233,52 @@ select option:checked {
   font-size: 14px;
   border: 1px solid rgba(255, 100, 100, 0.3);
   text-align: center;
+}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Toggle button styling
+.toggle-auth-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: underline;
+  opacity: 0.9;
+  padding: 0;
+  margin-top: 20px;
+  transition: opacity 0.3s ease;
+}
+
+.toggle-auth-btn:hover {
+  opacity: 1;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Disabled button state */
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed !important;
+  transform: none !important;
+}
+
+button:disabled:hover {
+  transform: none !important;
+  box-shadow: none !important;
 } 
